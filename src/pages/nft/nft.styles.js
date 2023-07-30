@@ -34,17 +34,13 @@ export const BarWrapper = styled.div`
       height: 100%;
       display: flex;
       align-items: center;
-      margin-top:5rem;
-      margin-left:10rem;
+      margin-left:14rem;
       align-items: center;
       flex-direction: row;
-      overflow: show;            
-  
-
- 
-
- 
-    `;
+      gap: 2rem;
+      justify-items:space-around;
+                
+  `;
 
 
 export const ButtonContainer = styled.div`
@@ -69,7 +65,7 @@ export const Button = styled.button`
     
     `;   
     
-    export const Header = styled.div`
+export const Header = styled.div`
     width: 80%;
     height: 20%;
     display: flex;
@@ -78,7 +74,7 @@ export const Button = styled.button`
     justify-content:center;
     align-content: center;
     margin-left:8rem;
-    margin-top:3rem;
+    margin-top:5rem;
 
     & h2 {
         color: #fff;
@@ -107,8 +103,8 @@ export const Button = styled.button`
         font-weight:700;
         font-size:3rem;
         font-family: Sans-Serif;
-        color:  #B98D63;
-        margin-left:9rem;
+        color:  #fff;
+        margin-left:2rem;
         line-height:5rem;
         
         }
@@ -129,7 +125,8 @@ export const Button = styled.button`
         line-height:5rem;
         font-size:2rem;
         font-family: Sans-Serif;
-        color:  #B98D63;
+        color:  #fff;
+        margin-top: 2rem;
         
         
         

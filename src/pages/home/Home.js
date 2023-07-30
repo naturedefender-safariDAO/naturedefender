@@ -95,7 +95,7 @@ const Home = () => {
                                                 <BigLinkContainer>
                                                         <NavbarLink><Link to='/' style={{ textDecoration: 'none', color: 'white' }} >Home</Link></NavbarLink>
                                                         <NavbarLink> <Link to='/ongoing-projects' style={{ textDecoration: 'none', color: 'white' }}>Explore</Link></NavbarLink>
-                                                        <NavbarLink><Link to='/nft-rewards' style={{ textDecoration: 'none', color: 'white' }}>NFTs reward</Link></NavbarLink>
+                                                        <NavbarLink><Link to='/nft-rewards' style={{ textDecoration: 'none', color: 'white' }}>Projects</Link></NavbarLink>
                                                         <NavbarLink><Link style={{ textDecoration: 'none', color: 'white' }}>About us </Link></NavbarLink>
                                                         <NavbarLink><Link style={{ textDecoration: 'none', color: 'white' }}>FAQs</Link></NavbarLink>
                                                 </BigLinkContainer>
@@ -109,17 +109,17 @@ const Home = () => {
                                         <TextContainer><h1>01 Empowering Conservation</h1>
                                                 <h2>Heroes</h2>
                                                 <br></br> <h3>NatureDefenders empowers individuals and
-                                                        <br></br>organizations to protect African wildlife through
+                                                        <br></br>organizations to protect wildlife through
                                                         <br></br>transparent blockchain-powered fundraising,
-                                                        <br></br>while rewarding supporters with exclusive NFTs
-                                                        <br></br>as a token of appreciation</h3>
+                                                        <br></br>while rewarding supporters with exclusive badge
+                                                        <br></br>rewards as a token of appreciation</h3>
 
                                                 <ButtonContainer> <GButton onClick={() => GetStarted('getStarted')}
                                                         className={getStarted === 'get Started' ? 'bg-gray-300 cursor-not-allowed' : '#B98D63'}
                                                 >Get Started</GButton>
 
 
-                                                        <LButton>Learn more</LButton>
+                                                        <LButton>Create Project</LButton>
 
                                                 </ButtonContainer>
                                                 <LineContainer><h3>01<img src={line} alt="line" /></h3>
