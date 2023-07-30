@@ -14,12 +14,12 @@ import arrow from "../../assets/arrow.png";
 import tusk from "../../assets/tusk.png";
 import horn from "../../assets/horn.png";
 import speed from "../../assets/speed.png";
-import timber from "../../assets/timber.png";
 import bark from "../../assets/bark.png";
 import pride from "../../assets/pride.png";
 import root from "../../assets/root.png";
 import canopy from "../../assets/canopy.png";
 import silent from "../../assets/silent.png";
+import roar from "../../assets/roar.png";
 import Footer from "../../components/footer/Footer";
 import Subfooter from "../../components/subfooter/Subfooter";
 import Navbar from "../../components/navbar/Navbar";
@@ -48,7 +48,7 @@ const OngoingProjects = () => {
 
                 <SummaryContainer1>
                     <img src={horn} alt="horn" />
-                    <img src={timber} alt="timber" />
+                    <img src={roar} alt="roar" />
                     <img src={tusk} alt="tusk" />
                 </SummaryContainer1>
                 <SummaryContainer2>

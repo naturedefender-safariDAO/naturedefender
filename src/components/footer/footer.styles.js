@@ -30,8 +30,8 @@ export const SubscribeContainer = styled.div`
     & h3 {
       margin-top: 1rem;
       color: #ffffff;
-      margin-left: 7rem;
-      font-size:2rem;
+      margin-left: 8rem;
+      font-size:1.8rem;
       font-weight:700;
       margin-bottom:2rem;
       
@@ -117,7 +117,7 @@ margin-top:0.25rem;
 margin-bottom:0.25rem;
 font-size: 1rem;
 display:flex;
-margin-left:13rem;
+margin-left:12.5rem;
 
 
 `;

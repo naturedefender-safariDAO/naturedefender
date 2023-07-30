@@ -4,9 +4,7 @@ import {
     CreationWrapper,
     FooterWrapper,
     SubfooterWrapper,
-    DivideWrapper,
     Wrapper,
-    Side,
     FormHeader,
     BarWrapper
 } from "./project.creation.styles";
@@ -48,19 +46,19 @@ const ProjectCreation = () => {
                             name="companyName"
 
                         />
+                         <FormTextInput
+                            labelName="Company Location"
+                            placeholder="Add your company’s location"
+                            name="companyLocation"
 
+                        />
                         <FormTextInput
                             labelName="Contact Information"
                             placeholder="Add your contact information, email, phone number and social media links"
                             name="contactInformation"
 
                         />
-                        <FormTextInput
-                            labelName="Wallet Address"
-                            placeholder="e.g 0xd914...ABED"
-                            name="walletAddress"
-
-                        />
+                        
                         <FormTextInput
                             labelName="Team background"
                             placeholder="Brief description of the team background, their qualification and experience"
@@ -80,57 +78,39 @@ const ProjectCreation = () => {
 
                         />
                         <FormTextInput
-                            labelName="Funding goals"
-                            placeholder="Specify the amount of fund needed to complete the project"
-                            name="fundingGoals"
+                            labelName="Project Impact"
+                            placeholder="Explain how you will contribute to the betterment of society."
+                            name="projectImpact"
 
                         />
                         <FormTextInput
-                            labelName="Add picture"
-                            placeholder="Drag and drop or Select file from computer
-                                        Pictures (in jpeg or png format only)"
-                            name="addPicture"
+                            labelName="Preventive measures"
+                            placeholder="The preventive measures you will put in place to secure the animals"
+                            name="preventiveMeasures"
                             height="5rem"
 
                         />
                         <FormTextInput
-                            labelName="Rewards"
-                            placeholder="Specify the reward for the donors"
-                            name="rewards"
+                            labelName="Habitation Restoration"
+                            placeholder="Provide an explanation of the habitat restoration project"
+                            name="habitationRestoration"
 
                         />
                         <FormTextInput
-                            labelName="Road Map"
-                            placeholder="Brief background of team members; their qualifications & experience"
-                            name="fundingGoals"
+                            labelName="Add a Picture"
+                            placeholder="Drag and drop or Select file from computer, Pictures (in jpeg or png format only)"
+                            name="addPicture"
+                            height="5rem"
 
                         />
-                        <DivideWrapper>
-                            <Side>
-                               
-                                <FormTextInput
-                                    labelName="Country of Residence"
-                                    placeholder="e.g Nigeria"
-                                    name="country"
-
-                                />
-                            </Side>
-                            <Side>
-                                <FormTextInput
-                                    labelName="Phone Number"
-                                    placeholder="+234 "
-                                    name="phoneNumber"
-
-                                />
-                            </Side>
-                        </DivideWrapper>
+                       
 
                         <FormButton
-                            text="Create Project"
+                            text="Continue"
                             color="#ffffff"
                             borderColor="#DA8450"
                             backgroundColor={"#DA8450"}
-
+                            
                         />
 
 
