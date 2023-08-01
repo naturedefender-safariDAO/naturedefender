@@ -23,14 +23,14 @@ export const CenterWrapper = styled.div`
 export const SubscribeContainer = styled.div`
     width: 100vw;
     height: 50%;
-   margin-left:20rem;
+   margin-left:25rem;
     
     
     
     & h3 {
       margin-top: 1rem;
       color: #ffffff;
-      margin-left: 8rem;
+      margin-left: 7rem;
       font-size:1.8rem;
       font-weight:700;
       margin-bottom:2rem;
@@ -113,11 +113,11 @@ border-radius:5px;
 color:#ffffff;
 height: 1.8rem;
 align-items: center;
-margin-top:0.25rem;
+margin-top:0.275rem;
 margin-bottom:0.25rem;
 font-size: 1rem;
 display:flex;
-margin-left:12.5rem;
+margin-left:10.5rem;
 
 
 `;
