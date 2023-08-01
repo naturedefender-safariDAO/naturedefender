@@ -14,6 +14,7 @@
     "flowbite-react": "^0.4.11",
     "framer-motion": "^10.12.17",
     "react": "^18.2.0",
+    "react-burger-menu": "^3.0.9",
     "react-dom": "^18.2.0",
     "react-responsive-carousel": "^3.2.23",
     "react-responsive-modal": "^6.4.2",

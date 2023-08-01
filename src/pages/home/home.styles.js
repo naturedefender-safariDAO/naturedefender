@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { device } from "../../utils/device";
 
 
 export const HomeParent = styled.div`
@@ -8,8 +9,7 @@ export const HomeParent = styled.div`
     display: flex;
     flex-direction: column;
     background:#1A1818;
-
-     `;
+`;
 
 export const HomeWrapper = styled.div`
      width: 100vw;
@@ -18,9 +18,15 @@ export const HomeWrapper = styled.div`
      flex-direction: column;
      background:#1A1818;
 
+ @media ${device.laptopL} { 
+    max-width: 1400px;
+    }
+
+ @media ${device.desktop} {
+    max-width: 2500px;
+    }
     
- 
-      `;
+`;
 
 
 
@@ -31,23 +37,14 @@ export const NavContainer = styled.div`
     position: relative;
     flex-direction: column;
     background:#1A1818;
-
-
-   
-
-     `;
+`;
 
 export const NavWrapper = styled.div`
      width: 100%;
      height: 100%;
      display: flex;
      
-
-     
- 
-     
- 
-      `;
+ `;
 
 export const LogoContainer = styled.div`
     width: 25%;
@@ -72,7 +69,7 @@ export const LogoContainer = styled.div`
     
     `;
 
- 
+
 export const BigLinkContainer = styled.div`
     display: flex;
     margin-left: 5rem;
@@ -104,9 +101,10 @@ export const NavbarLink = styled(Link)`
 
 
 export const ButtonWrapper = styled.div`
-display:flex;
-margin-left:7rem;
-margin-top: 3.5rem;
+  display:flex;
+  margin-left:5rem;
+  margin-top: 3.5rem;
+  flex-direction: row;
 
 
 & img{
@@ -115,6 +113,74 @@ margin-top: 3.5rem;
     width: 1.5rem;
     height:1.5rem;
 }
+
+& page-wrap {
+    text-align: center;
+    overflow: auto;
+  }
+  
+  
+& bm-item {
+    display: inline-block;
+    text-decoration: "#fff";
+    margin-bottom: 10px;
+    color: #fff;
+    transition: color 0.2s;
+  }
+  
+  
+& bm-item:hover {
+    color: #fff;
+  }
+  
+  
+  
+  
+& bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    left: 36px;
+    top: 36px;
+  }
+  
+  
+& bm-burger-bars {
+    background: #fff;
+  }
+  
+  
+& bm-cross-button {
+    height: 10px;
+    width: 10px;
+  }
+  
+  
+& bm-cross {
+    background: #1A1818;
+  }
+
+& bm-menu {
+    background: #fff;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+  }
+  
+  
+& bm-morph-shape {
+    fill: #fff;
+  }
+  
+  
+& bm-item-list {
+    color: #fff;
+  }
+  
+& bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+
 
 `;
 
@@ -131,6 +197,51 @@ justify-content: center;
 
 
 
+`;
+
+export const MenuLabel = styled.label`
+  position: relative;
+  height: 3em;
+  width: 3rem;
+  cursor: pointer;
+  z-index: 1000;
+  margin-left: 2rem;
+  box-shadow: 0 1rem 3rem rgba(182, 237, 200, 0.3);
+  text-align: center;
+`;
+
+export const Icon = styled.span`
+  position: relative;
+  background-color: ${(props) => (props.clicked ? "transparent" : "white")};
+  width: 3rem;
+  height: 2px;
+  display: inline-block;
+ transition: all 0.3s;
+  &::before,
+  &::after {
+    content: "";
+    background-color: white;
+    width: 3rem;
+    height: 2px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s;
+  }
+  &::before {
+    top: ${(props) => (props.clicked ? "0" : "-0.8rem")};
+    transform: ${(props) => (props.clicked ? "rotate(135deg)" : "rotate(0)")};
+  }
+  &::after {
+    top: ${(props) => (props.clicked ? "0" : "0.8rem")};
+    transform: ${(props) => (props.clicked ? "rotate(-135deg)" : "rotate(0)")};
+  }
+  ${MenuLabel}:hover &::before {
+    top: ${(props) => (props.clicked ? "0" : "-1rem")};
+  }
+  ${MenuLabel}:hover &::after {
+    top: ${(props) => (props.clicked ? "0" : "1rem")};
+  }
 `;
 
 export const CentreWrapper = styled.div`
@@ -155,7 +266,7 @@ export const Overlay = styled.div`
       `;
 
 
-export const TextContainer= styled.div`
+export const TextContainer = styled.div`
 width: 50vw;
 position: absolute;
 top: 90%;
@@ -254,7 +365,7 @@ export const LineContainer = styled.div`
 `;
 
 
-export const TextContainer2= styled.div`
+export const TextContainer2 = styled.div`
 width: 50vw;
 position: absolute;
 top: 140%;

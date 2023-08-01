@@ -20,12 +20,12 @@ const Navbar = () => {
     return (
         <NavbarParent>
             <NavbarWrapper>
-                <LogoContainer><img src={logo} alt="logo" />
+                <LogoContainer><Link to="/"><img src={logo} alt="logo" /></Link>
                     <h1>NatureDefenders</h1></LogoContainer>
                 <BigLinkContainer>
                     <NavbarLink><Link to='/' style={{ textDecoration: 'none', color: 'white' }} >Home</Link></NavbarLink>
                     <NavbarLink> <Link  to='/ongoing-projects'  style={{ textDecoration: 'none', color: 'white' }}>Explore</Link></NavbarLink>
-                    <NavbarLink><Link  to='/nft-rewards' style={{ textDecoration: 'none', color: 'white' }}>Projects</Link></NavbarLink>
+                    <NavbarLink><Link  to='/nft-reward' style={{ textDecoration: 'none', color: 'white' }}>Projects</Link></NavbarLink>
                     <NavbarLink><Link style={{ textDecoration: 'none', color: 'white' }}>About us </Link></NavbarLink>
                     <NavbarLink><Link style={{ textDecoration: 'none', color: 'white' }}>FAQs</Link></NavbarLink>
                 </BigLinkContainer>

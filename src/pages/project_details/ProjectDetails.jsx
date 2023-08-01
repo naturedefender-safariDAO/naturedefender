@@ -8,9 +8,9 @@ import andersonImg from '../../assets/anderson.svg';
 import incentiveImg from '../../assets/incentives.png';
 import updateImg from '../../assets/updates.svg';
 import padlockImg from '../../assets/padlocks.svg';
-import rhinoImg from '../../assets/one-rhino.svg';
 import Navbar from '../../components/navbar/Navbar';
 import rhinotwo from "../../assets/rhinotwo.png";
+import hornImage from "../../assets/hornImage.svg";
 import Subfooter from '../../components/subfooter/Subfooter';
 import Footer from '../../components/footer/Footer';
 
@@ -177,7 +177,7 @@ export const ProjectOverview1= () => {
       <section  className='md:flex md:justify-between md:py-2 h-full'>
         <div className='w-full md:w-[45%] md:h-[50vh] h-full rounded-lg border'>
           <img
-            src={rhinoImg}
+            src={hornImage}
             className='object-cover mb-10 h-full w-full object-center rounded-lg'
             quality={100}
             alt='m1'
@@ -256,7 +256,7 @@ export const ProjectOverview1= () => {
               </div>
 
               <div className='flex justify-center w-full'>
-                <button className='text-white font-bold w-full bg-orange-300 rounded-lg py-3 px-10'>Withdraw</button>
+                <button className='text-white font-bold w-full bg-orange-300 rounded-lg py-3 px-10'>Donate</button>
               </div>
 
             </div>

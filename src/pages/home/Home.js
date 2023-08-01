@@ -37,6 +37,7 @@ import Footer from "../../components/footer/Footer";
 import Subfooter from "../../components/subfooter/Subfooter";
 import 'sweetalert2/dist/sweetalert2.css';
 import Swal from 'sweetalert2';
+import Hamburger from "../../components/hamburger/Hamburger";
 
 
 
@@ -48,6 +49,8 @@ import Swal from 'sweetalert2';
 
 
 const Home = () => {
+
+       
         const [getStarted, setGetStarted] = useState('');
 
         const GetStarted = (start) => {
@@ -95,12 +98,18 @@ const Home = () => {
                                                 <BigLinkContainer>
                                                         <NavbarLink><Link to='/' style={{ textDecoration: 'none', color: 'white' }} >Home</Link></NavbarLink>
                                                         <NavbarLink> <Link to='/ongoing-projects' style={{ textDecoration: 'none', color: 'white' }}>Explore</Link></NavbarLink>
-                                                        <NavbarLink><Link to='/nft-rewards' style={{ textDecoration: 'none', color: 'white' }}>Projects</Link></NavbarLink>
+                                                        <NavbarLink><Link to='/nft-reward' style={{ textDecoration: 'none', color: 'white' }}>Projects</Link></NavbarLink>
                                                         <NavbarLink><Link style={{ textDecoration: 'none', color: 'white' }}>About us </Link></NavbarLink>
                                                         <NavbarLink><Link style={{ textDecoration: 'none', color: 'white' }}>FAQs</Link></NavbarLink>
                                                 </BigLinkContainer>
                                                 <ButtonWrapper><img src={searchIcon} alt="search-icon" width={18} height={18} />
-                                                        <Button>Connect Wallet</Button></ButtonWrapper>
+                                                        <Button>Connect Wallet</Button>
+                                                        <Hamburger pageWrapId={"page-wrap"} outerContainerId={"ButtonWrapper"} style={{marginLeft:'2rem'}}/>
+
+                                                      <div id="page-wrap"></div>
+
+                                                </ButtonWrapper>
+
                                         </NavWrapper>
                                 </NavContainer>
                                 <CentreWrapper>
