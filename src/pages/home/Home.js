@@ -128,7 +128,7 @@ const Home = () => {
                                                 >Get Started</GButton>
 
 
-                                                        <LButton>Create Project</LButton>
+                                                       <Link to='/project-creation' style={{ textDecoration: 'none', color: 'white' }}><LButton>Create Project</LButton></Link> 
 
                                                 </ButtonContainer>
                                                 <LineContainer><h3>01<img src={line} alt="line" /></h3>
