@@ -2,8 +2,8 @@ import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import landingimage from "../../assets/landingimage.svg";
-import landingimage2 from "../../assets/landingpage2.svg";
-import landingimage3 from "../../assets/landingpage3.svg";
+import landingimage2 from "../../assets/landingimage2.svg";
+import landingimage3 from "../../assets/landingimage3.svg";
 
 const BackgroundImage = () => {
   return ( 
