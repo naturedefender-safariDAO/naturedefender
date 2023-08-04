@@ -33,7 +33,7 @@ const Projects = () => {
                 </Header>
 
                 <SummaryContainer1>
-                    <img src={horn} alt="horn" />
+                    <Link to='/project-details'><img src={horn} alt="horn" /></Link>
                     <img src={roar} alt="roar"/>
                     <img src={tusk} alt="tusk" />
                 </SummaryContainer1>
