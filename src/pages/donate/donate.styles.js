@@ -11,11 +11,12 @@ export const DonateParent = styled.div`
      `;
 
 export const DonateWrapper = styled.div`
-     width: 100vw;
-     height: 200vh;
+     width: 105vw;
+     height: 250vh;
      display: flex;
      flex-direction: column;
      background:#1A1818;
+     color:#fff;
  
     
       `;
@@ -60,6 +61,18 @@ export const BarWrapper = styled.div`
       }  
                 
   `;
+
+  export const SummaryContainer2 = styled.div`
+  width: 30%;
+  height: 20%;
+  display: flex;
+  margin-left:33rem;
+  flex-direction: column;
+  justify-items:space-around;
+  color: #fff;
+
+        
+`;
 
 
 export const ButtonContainer = styled.div`
@@ -211,7 +224,7 @@ export const EstimateContainer= styled.div`
     display: flex;
     background:#1A1818;
     align-items: center;
-    margin-top: 8rem;
+    margin-top: 5rem;
     
      
     `;

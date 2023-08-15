@@ -12,6 +12,7 @@ import Navbar from '../../components/navbar/Navbar';
 import rhinotwo from "../../assets/rhinotwo.png";
 import hornImage from "../../assets/hornImage.svg";
 import Subfooter from '../../components/subfooter/Subfooter';
+import {Link} from 'react-router-dom';
 
 
 
@@ -253,7 +254,7 @@ export const ProjectOverview1= () => {
               </div>
 
               <div className='flex justify-center w-full'>
-                <button className='text-white font-bold w-full bg-orange-300 rounded-lg py-3 px-10'>Donate</button>
+               <Link to='/donate'><button className='text-white font-bold w-full bg-orange-300 rounded-lg py-3 px-10'>Donate</button></Link> 
               </div>
 
             </div>

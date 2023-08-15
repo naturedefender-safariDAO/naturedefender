@@ -6,6 +6,7 @@ import {
     SubfooterWrapper,
     BarWrapper,
     SummaryContainer1,
+    SummaryContainer2,
     Button,
     ButtonContainer,
     TextContainer,
@@ -18,6 +19,7 @@ import rhinotwo from "../../assets/rhinotwo.png";
 import { Link } from "react-router-dom";
 import 'sweetalert2/dist/sweetalert2.css';
 import Swal from 'sweetalert2';
+import Checkbox from "../../components/checkbox/Checkbox";
 
 
 
@@ -30,7 +32,11 @@ import Swal from 'sweetalert2';
 
 
 const Donate = () => {
-          
+        
+    const [checked, setChecked] = useState(false);
+    const onChange = () => {
+        setChecked(!checked);
+    };
         const [donate, setDonate] = useState('');
 
         const Donate = (donate) => {
@@ -98,8 +104,17 @@ const Donate = () => {
 
 
                     </SummaryContainer1>
-                    <p style={{ marginLeft: '33rem', color: '#fff', marginTop: '1rem' }}>Your contribution must be valued at 2USD to be eligible for
-                        <br></br> matching</p>
+                    <SummaryContainer2>
+                    <p>Your contribution must be valued at 2USD to be eligible
+                        <br></br> for matching</p>
+                        <Checkbox
+                            id="checkbox"
+                            label="Caveat: I agree that only 99% of the amount donated will be remited out of the total contribution, 
+                            the remaining1% of the donation will be allocated to the NatureDefenders platform."
+                            value={checked}
+                            onChange={onChange}
+                        />
+                        </SummaryContainer2>
                     <ButtonContainer>
                         <Button onClick={() => Donate('donate')}
                                                         className={donate === 'donate' ? 'bg-gray-300 cursor-not-allowed' : '#B98D63'}>
