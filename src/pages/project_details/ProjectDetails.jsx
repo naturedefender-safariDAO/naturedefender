@@ -12,7 +12,7 @@ import Navbar from '../../components/navbar/Navbar';
 import rhinotwo from "../../assets/rhinotwo.png";
 import hornImage from "../../assets/hornImage.svg";
 import Subfooter from '../../components/subfooter/Subfooter';
-import Footer from '../../components/footer/Footer';
+
 
 
 
@@ -155,9 +155,6 @@ const ProjectDetails = () => {
               {project}
             </div>
           ))}
-          <div class="flex flex-col md:flex-row justify-center p-28">
-          <Footer/>
-          </div>
           <div class="flex flex-col md:flex-row justify-center">
           <Subfooter/>
          </div>
@@ -246,12 +243,12 @@ export const ProjectOverview1= () => {
                   
                 <div>
                   <h3 className='font-bold'>Estimated Amount</h3>
-                  <p>5.00ETH</p>
+                  <p>5,000 USDT</p>
                 </div>
 
                 <div>
                   <h3 className='font-bold'>Amount Raised</h3>
-                  <p>3.825ETH</p>
+                  <p>3,825 USDT</p>
                 </div>
               </div>
 

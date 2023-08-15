@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import {
     CreationParent,
     CreationWrapper,
-    FooterWrapper,
     SubfooterWrapper,
     Wrapper,
     FormHeader,
     BarWrapper
 } from "./project.creation.styles";
-import Footer from "../../components/footer/Footer";
 import Subfooter from "../../components/subfooter/Subfooter";
 import Navbar from "../../components/navbar/Navbar";
 import arrow from "../../assets/arrow.png";
@@ -129,9 +127,7 @@ const ProjectSubmit = () => {
 
                         </form>
 
-                        <FooterWrapper>
-                            <Footer />
-                        </FooterWrapper>
+                        
                         <SubfooterWrapper>
                             <Subfooter />
                         </SubfooterWrapper>

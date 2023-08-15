@@ -2,18 +2,17 @@ import React from "react";
 import {
     CreationParent,
     CreationWrapper,
-    FooterWrapper,
     SubfooterWrapper,
     Wrapper,
     FormHeader,
     BarWrapper
 } from "./project.creation.styles";
-import Footer from "../../components/footer/Footer";
 import Subfooter from "../../components/subfooter/Subfooter";
 import Navbar from "../../components/navbar/Navbar";
 import arrow from "../../assets/arrow.png";
 import FormButton from "../../components/custom-button/FormButton";
 import FormTextInput from "../../components/custom-input/FormTextInput";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -21,6 +20,12 @@ import FormTextInput from "../../components/custom-input/FormTextInput";
 
 
 const ProjectCreation = () => {
+    
+    const navigate = useNavigate();
+
+    const routeToNextPage = () => {
+        navigate("/project-submit")
+    };
 
 
     return (
@@ -110,6 +115,7 @@ const ProjectCreation = () => {
                             color="#ffffff"
                             borderColor="#DA8450"
                             backgroundColor={"#DA8450"}
+                            handleClick={routeToNextPage}
                          
                         />
 
@@ -118,9 +124,7 @@ const ProjectCreation = () => {
 
                     </form>
 
-                    <FooterWrapper>
-                        <Footer />
-                    </FooterWrapper>
+                    
                     <SubfooterWrapper>
                         <Subfooter />
                     </SubfooterWrapper>
