@@ -70,6 +70,7 @@ const Signup = () => {
                             label="By signing up you accept our Terms of Service and Privacy Policy."
                             value={checked}
                             onChange={onChange}
+                            fontSize='0.5rem'
                         />
                         <Button
                             size='md'
