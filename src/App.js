@@ -5,7 +5,7 @@ import Home from "./pages/home/Home";
 import ProjectDetails from "./pages/project_details/ProjectDetails";
 import ProjectCreation from "./pages/project-creation/ProjectCreation";
 import OngoingProjects from "./pages/ongoing-projects/OngoingProjects";
-import NFT from "./pages/nft/NFT";
+import Badge from "./pages/Badge/Badge";
 import ProjectSubmit from "./pages/project-creation/ProjectSubmit";
 import Donate from "./pages/donate/Donate";
 import Naturedefenders from "./components/naturedefenders/Naturedefenders";
@@ -23,7 +23,7 @@ function App() {
       <Route  path="/project-creation" element={<ProjectCreation />} />
       <Route  path='/project-submit' element={<ProjectSubmit/>} />
       <Route  path="/ongoing-projects" element={<OngoingProjects />} />
-      <Route  path="/nft-reward" element={<NFT />} />
+      <Route  path="/badge-reward" element={<Badge />} />
       <Route  path="/donate" element={<Donate/>} />
       <Route  path="/why-naturedefenders" element={<Naturedefenders />}/>
     </Routes>

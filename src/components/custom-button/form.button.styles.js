@@ -16,5 +16,6 @@ export const NavigateButton = styled.button`
     ${(props) => (props.borderColor ? props.borderColor : "#DA8450")};
   display: block;
   outline: none;
+  margin-left:2rem;
 `;
 

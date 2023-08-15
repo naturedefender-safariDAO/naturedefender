@@ -4,7 +4,6 @@ import {
     DonateWrapper,
     Header,
     SubfooterWrapper,
-    FooterWrapper,
     BarWrapper,
     SummaryContainer1,
     Button,
@@ -12,7 +11,6 @@ import {
     TextContainer,
     EstimateContainer
 } from "./donate.styles";
-import Footer from "../../components/footer/Footer";
 import Subfooter from "../../components/subfooter/Subfooter";
 import Navbar from "../../components/navbar/Navbar";
 import { Wrapper } from "../project-creation/project.creation.styles";
@@ -108,9 +106,7 @@ const Donate = () => {
                             <Link style={{ textDecoration: 'none', color: 'white' }}>Donate</Link>
                         </Button>
                     </ButtonContainer>
-                    <FooterWrapper>
-                        <Footer />
-                    </FooterWrapper>
+                    
                     <SubfooterWrapper>
                         <Subfooter />
                     </SubfooterWrapper>

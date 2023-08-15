@@ -47,12 +47,7 @@ const Signup = () => {
                             name="emailAddress"
 
                         />
-                        <FormTextInput
-                            labelName="Wallet Address"
-                            placeholder="e.g 0xd914...ABED"
-                            name="walletAddress"
-
-                        />
+                        
                         <FormTextInput
                             labelName="Password"
                             placeholder="********"

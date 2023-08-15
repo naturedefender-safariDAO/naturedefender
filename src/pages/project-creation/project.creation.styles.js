@@ -109,23 +109,13 @@ export const Side = styled.div`
 
 
 
-export const FooterWrapper = styled.div`
-width: 100%;
-height: 30%;
-display: flex;
-background:#1A1818;
-align-items: center;
-margin-top: 45rem;
- 
- 
-`;
-
 export const SubfooterWrapper = styled.div`
 width: 100%;
 height: 30%;
 display: flex;
 background:#1A1818;
 align-items: center;
+margin-top: 40rem;
 
  
 `;
