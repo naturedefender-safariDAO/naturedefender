@@ -19,14 +19,14 @@ import { Button } from '@chakra-ui/react';
 
 
 const Signin = () => {
-
+    
 
     return (
         <SigninParent>
             <SigninWrapper>
                 <Wrapper>
 
-                    <form>
+                    <form >
                         <FormHeader>
                             <h3>SIGN INTO YOUR ACCOUNT</h3>
 
@@ -36,7 +36,9 @@ const Signin = () => {
                         <FormTextInput
                             labelName="Email address"
                             placeholder="e.g devonlane@gmail.com"
-                            name="emailAddress"
+                            name="email"
+                            
+                           
 
                         />
 
@@ -44,7 +46,7 @@ const Signin = () => {
                             labelName="Password"
                             placeholder="********"
                             name="password"
-
+                            
                         />
 
 
@@ -60,8 +62,9 @@ const Signin = () => {
                             background='#DA8450'
                             fontWeight='500'
                             marginTop='20px'
+                            
                         >
-                            Sign in
+                           Sign in
                         </Button>
 
                         <p>Don't have an account?<Link to="/sign-up" style={{ textDecoration: 'none', color: '#DA8450' }}>Sign up</Link></p>
