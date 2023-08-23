@@ -14,8 +14,9 @@ import searchIcon from "../../assets/search-icon.png";
 
 
 
-
 const Navbar = () => {
+   
+
 
     return (
         <NavbarParent>

@@ -76,7 +76,27 @@ export const SignupWrapper = styled.div`
 
     `;
 
-
+    export const Select = styled.select`
+    width: 75%;
+    height:10%;
+    background: #1A1818;
+    color: white;
+    border:1px solid white;
+    border-radius: 5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+   
+  
+         option {
+           color: #fff;
+           background: #1A1818;
+           font-weight: 200;
+           display: flex;
+           min-height: 20px;
+           padding: 1px 2px 1px;
+         }
+  `;
+  
 
      
    
