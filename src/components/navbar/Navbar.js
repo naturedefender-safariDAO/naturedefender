@@ -5,12 +5,13 @@ import {
     LogoContainer,
     BigLinkContainer,
     NavbarLink,
-    Button,
+    
     ButtonWrapper
 } from "./navbar.styles";
 import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import searchIcon from "../../assets/search-icon.png";
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 
 
@@ -31,7 +32,7 @@ const Navbar = () => {
                     <NavbarLink><Link style={{ textDecoration: 'none', color: 'white' }}>FAQs</Link></NavbarLink>
                 </BigLinkContainer>
                 <ButtonWrapper><img src={searchIcon} alt="search-icon" width={18} height={18} />
-                    <Button>Connect Wallet</Button></ButtonWrapper>
+                    <ConnectButton/></ButtonWrapper>
                 
                 <div class="p-16 space-y-2 rounded shadow">
                   <Link to='/sign-in'> <span class="block w-8 h-0.5 bg-gray-100 animate-pulse"></span> </Link>
