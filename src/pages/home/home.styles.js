@@ -17,14 +17,26 @@ export const HomeWrapper = styled.div`
      flex-direction: column;
      background:#1A1818;
 
- @media ${device.laptopL} { 
+@media ${device.laptopL} { 
     max-width: 1400px;
     }
 
- @media ${device.desktop} {
+@media ${device.desktop} {
     max-width: 2500px;
     }
-    
+ @media ${device.tablet} {
+    max-width: 768px;
+        }
+ @media ${device.mobileL} {
+            max-width: 425px;
+            }
+ @media ${device.mobileM} {
+         max-width: 375px;
+                }
+ @media ${device.mobileS} {
+         max-width: 320px;
+                    }
+                                                        
 `;
 
 
