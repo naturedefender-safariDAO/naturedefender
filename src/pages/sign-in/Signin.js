@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import CarouselPage from "../../components/carousel/Carousel";
 import FormTextInput from "../../components/custom-input/FormTextInput";
 import arrow from "../../assets/arrow.png";
-import { Button } from '@chakra-ui/react';
+import { Button, CloseButton } from '@chakra-ui/react';
 
 
 
@@ -27,6 +27,7 @@ const Signin = () => {
                 <Wrapper>
 
                     <form >
+                      <Link to='/'>  <CloseButton/></Link>
                         <FormHeader>
                             <h3>SIGN INTO YOUR ACCOUNT</h3>
 
