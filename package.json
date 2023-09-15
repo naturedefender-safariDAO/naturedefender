@@ -25,8 +25,8 @@
     "react-simple-image-slider": "^2.4.1",
     "styled-components": "^6.0.0-rc.6",
     "sweetalert2": "^11.7.20",
-    "viem": "^1.10.9",
-    "wagmi": "^1.4.1",
+    "viem": "^1.10.14",
+    "wagmi": "^1.4.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
