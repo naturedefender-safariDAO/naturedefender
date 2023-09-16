@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import {
     DonateParent,
     DonateWrapper,
@@ -10,7 +10,8 @@ import {
     Button,
     ButtonContainer,
     TextContainer,
-    EstimateContainer
+    EstimateContainer,
+    InputContainer
 } from "./donate.styles";
 import Subfooter from "../../components/subfooter/Subfooter";
 import Navbar from "../../components/navbar/Navbar";
@@ -20,6 +21,11 @@ import { Link } from "react-router-dom";
 import 'sweetalert2/dist/sweetalert2.css';
 import Swal from 'sweetalert2';
 import Checkbox from "../../components/checkbox/Checkbox";
+import FormTextInput from "../../components/custom-input/FormTextInput";
+import { useContractRead } from 'wagmi';
+import naturedefenderABI from "../../contract/naturedefender.json";
+
+
 
 
 
@@ -32,45 +38,55 @@ import Checkbox from "../../components/checkbox/Checkbox";
 
 
 const Donate = () => {
-        
+
+
+
     const [checked, setChecked] = useState(false);
     const onChange = () => {
         setChecked(!checked);
     };
-        const [donate, setDonate] = useState('');
+    const [donate, setDonate] = useState('');
 
-        const Donate = (donate) => {
-                if (!donate) {
-                        Swal.fire({
-                                position: 'center',
-                                icon: 'success',
-                                fontWeight: 'bold',
-                                title: 'You have successfully donated',
-                                text: 'Congratulations! You have successfully donated to support HornShield😊',
-                                background: "#110A03",
-                                confirmButtonColor: '#B98D63',
-                                confirmButtonText: 'Claim your Badge reward',
-                                // showConfirmButton: false,
-                                timer: 2500
-                        });
+    const Donate = (donate) => {
+        if (!donate) {
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                fontWeight: 'bold',
+                title: 'You have successfully donated',
+                text: 'Congratulations! You have successfully donated to support HornShield😊',
+                background: "#110A03",
+                confirmButtonColor: '#B98D63',
+                confirmButtonText: 'Claim your Badge reward',
+                // showConfirmButton: false,
+                timer: 2500
+            });
 
-                        setDonate(donate);
-                } else {
-                        Swal.fire({
-                                position: 'center',
-                                icon: 'danger',
-                                title: 'You have already donated',
-                                text: 'Thank you for donating.',
-                                background: "#110A03",
-                                confirmButtonColor: '#B98D63',
-                                confirmButtonText: 'OK',
-                                timer: 2000
-                        });
-                }
-        };
-        
+            setDonate(donate);
+        } else {
+            Swal.fire({
+                position: 'center',
+                icon: 'danger',
+                title: 'You have already donated',
+                text: 'Thank you for donating.',
+                background: "#110A03",
+                confirmButtonColor: '#B98D63',
+                confirmButtonText: 'OK',
+                timer: 2000
+            });
+        }
+    };
+    const {  isLoading } = useContractRead({
+        address: '0x8e0F543B4fdAAE2030427db92e47FFc9F695633F',
+        abi: naturedefenderABI,
+        functionName: 'naturedefender',
+    });
+
+
 
     return (
+
+
         <DonateParent>
             <DonateWrapper>
                 <BarWrapper>
@@ -97,6 +113,13 @@ const Donate = () => {
                         </EstimateContainer>
                         <h5>Project Selected</h5>
                         <h6>HornShield</h6>
+                        <InputContainer>
+                            <FormTextInput
+                                labelName="Input Amount"
+                                name="amount"
+                                placeholder="amount in USDT"
+                                F />
+                        </InputContainer>
                     </TextContainer>
                     <SummaryContainer1>
                         <h6>Total</h6>
@@ -105,8 +128,8 @@ const Donate = () => {
 
                     </SummaryContainer1>
                     <SummaryContainer2>
-                    <p>Your contribution must be valued at 2USD to be eligible
-                        <br></br> for matching</p>
+                        <p>Your contribution must be valued at 2USD to be eligible
+                            <br></br> for matching</p>
                         <Checkbox
                             id="checkbox"
                             label="Caveat: I agree that only 99% of the amount donated will be remited out of the total contribution, 
@@ -114,14 +137,16 @@ const Donate = () => {
                             value={checked}
                             onChange={onChange}
                         />
-                        </SummaryContainer2>
+                    </SummaryContainer2>
                     <ButtonContainer>
                         <Button onClick={() => Donate('donate')}
-                                                        className={donate === 'donate' ? 'bg-gray-300 cursor-not-allowed' : '#B98D63'}>
+                            className={donate === 'donate' ? 'bg-gray-300 cursor-not-allowed' : '#B98D63'}>
                             <Link style={{ textDecoration: 'none', color: 'white' }}>Donate</Link>
+                            {isLoading ? 'Donating...' : 'Donate'}
                         </Button>
+                       
                     </ButtonContainer>
-                    
+
                     <SubfooterWrapper>
                         <Subfooter />
                     </SubfooterWrapper>
