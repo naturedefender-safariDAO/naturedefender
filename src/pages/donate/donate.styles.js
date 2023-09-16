@@ -28,9 +28,9 @@ export const BarWrapper = styled.div`
       flex-direction: column;
       margin-top:2rem;
       margin-left:2rem;
-      `;      
+      `;
 
-    export const SummaryContainer1 = styled.div`
+export const SummaryContainer1 = styled.div`
       width: 30%;
       height: 20%;
       display: flex;
@@ -62,7 +62,7 @@ export const BarWrapper = styled.div`
                 
   `;
 
-  export const SummaryContainer2 = styled.div`
+export const SummaryContainer2 = styled.div`
   width: 30%;
   height: 20%;
   display: flex;
@@ -96,8 +96,8 @@ export const Button = styled.button`
     
     
     
-    `;   
-    
+    `;
+
 export const Header = styled.div`
     width: 80%;
     height: 20%;
@@ -122,7 +122,7 @@ export const Header = styled.div`
        
     `;
 
-export const TextContainer= styled.div`
+export const TextContainer = styled.div`
     width: 100vw;
     margin-left:3rem;
     color:#fff;
@@ -184,8 +184,8 @@ export const TextContainer= styled.div`
                 color:  #fff;
                 }    
     
-    `;  
-export const EstimateContainer= styled.div`
+    `;
+export const EstimateContainer = styled.div`
     width: 30%;
     height: 20%;
     margin-left:45rem;
@@ -215,25 +215,30 @@ export const EstimateContainer= styled.div`
 
    
     
-    `; 
-   
+    `;
+
+export const InputContainer = styled.div`
+    width: 40%;
+    height: 20%;
+    margin-bottom: 1rem;
     
-    export const SubfooterWrapper = styled.div`
+    
+`;
+
+export const SubfooterWrapper = styled.div`
     width: 100%;
-    height: 30%;
-    display: flex;
+    height: 40%;
     background:#1A1818;
     align-items: center;
     margin-top: 5rem;
     
      
     `;
-    
-    
-    
-         
-       
-       
-    
-    
-      
+
+
+
+
+
+
+
+
