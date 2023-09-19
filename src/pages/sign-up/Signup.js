@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-
+import React, { useState,useEffect } from "react";
 import {
     SignupParent,
     SignupWrapper,
@@ -11,8 +10,9 @@ import { Link } from "react-router-dom";
 import CarouselPage from "../../components/carousel/Carousel";
 import FormTextInput from "../../components/custom-input/FormTextInput";
 import arrow from "../../assets/arrow.png";
-import { Button,  CloseButton } from '@chakra-ui/react';
+import { Button, CloseButton, Box, useToast, Spinner} from '@chakra-ui/react';
 import Checkbox from "../../components/checkbox/Checkbox";
+import { APIConfig } from "../../config/apiConfig";
 
 
 
@@ -25,7 +25,87 @@ const Signup = () => {
     const onChange = () => {
         setChecked(!checked);
     };
-
+   
+    const [form, setForm] = useState({
+        fullname: "",
+        email: "",
+        password: "",
+        country: "",
+        user_type: "",
+      });
+      const [loading, setLoading] = useState(false);
+      const [success, setSuccess] = useState(false);
+      const [error, setError] = useState("");
+    
+      const toast = useToast();
+      // const dispatch = useDispatch();
+    
+      useEffect(() => {
+        if (success) {
+          toast({
+            position: "top-left",
+            render: () => (
+              <Box color="white" p={3} bg="green.500" fontSize={15}>
+                Sign up successful. Please check your mail for verification.
+              </Box>
+            ),
+          });
+        }
+    
+        if (error)
+          toast({
+            position: "top-right",
+            render: () => (
+              <Box color="white" p={3} bg="red.500" fontSize={15}>
+                {error}
+              </Box>
+            ),
+          });
+      }, [success, toast, error]);
+    
+      const { fullname, email, password, country, user_type } = form;
+    
+      const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (!fullname || !user_type || !email || !password || !country) {
+          toast({
+            position: "top-right",
+            render: () => (
+              <Box color="white" p={3} bg="red.500" fontSize={15}>
+                All fields are required!
+              </Box>
+            ),
+          });
+          return;
+        }
+    
+        setLoading(true);
+    
+        try {
+          const { data } = await APIConfig.post("users/register", form);
+          console.log(data);
+          // dispatch(
+          //   setUser({
+          //     fullname: data.fullname,
+          //     email: data.local.email,
+          //   })
+          // );
+          setLoading(false);
+          setSuccess(true);
+        } catch (error) {
+          setLoading(false);
+          setError(error.response.data.message);
+        }
+      };
+    
+      const handleChange = (e) => {
+        const { name, value } = e.target;
+    
+        setForm((prev) => ({
+          ...prev,
+          [name]: value,
+        }));
+      };
    
   
     return (
@@ -44,6 +124,7 @@ const Signup = () => {
                             labelName="Full Name"
                             placeholder="e.g Devon Lane"
                             name="fullName"
+                            onChange={handleChange}
                             
 
                         />
@@ -51,6 +132,7 @@ const Signup = () => {
                             labelName="Email address"
                             placeholder="e.g devonlane@gmail.com"
                             name="emailAddress"
+                            onChange={handleChange}
                           
 
                         />
@@ -59,6 +141,7 @@ const Signup = () => {
                             labelName="Password"
                             placeholder="********"
                             name="password"
+                            onChange={handleChange}
                            
 
                         />
@@ -71,14 +154,15 @@ const Signup = () => {
                             labelName="Country of Residence"
                             placeholder="Nigeria"
                             name="country"
+                            onChange={handleChange}
                             
 
                         />
                         <Select
                             placeholder="Select option"
                             height={"3.2rem"}
-                            
                             name="user_type"
+                            onChange={handleChange}
                            >
 
                             <option value="" hidden>Select your type of user</option>
@@ -105,9 +189,10 @@ const Signup = () => {
                             background='#DA8450'
                             fontWeight='500'
                             marginTop='20px'
+                            onClick={handleSubmit}
                             
                         >
-                            Create an account 
+                           {!loading ?  "Create an account" : <Spinner size="sm" color="white.500" />}
                         </Button>
 
 
