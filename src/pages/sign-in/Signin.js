@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import CarouselPage from "../../components/carousel/Carousel";
 import FormTextInput from "../../components/custom-input/FormTextInput";
 import arrow from "../../assets/arrow.png";
-import { Button, CloseButton } from '@chakra-ui/react';
+import { Button, CloseButton} from '@chakra-ui/react';
 
 
 
@@ -19,7 +19,8 @@ import { Button, CloseButton } from '@chakra-ui/react';
 
 
 const Signin = () => {
-    
+   
+      
 
     return (
         <SigninParent>
@@ -38,6 +39,7 @@ const Signin = () => {
                             labelName="Email address"
                             placeholder="e.g devonlane@gmail.com"
                             name="email"
+                           
                             
                            
 
@@ -47,7 +49,7 @@ const Signin = () => {
                             labelName="Password"
                             placeholder="********"
                             name="password"
-                            
+                           
                         />
 
 
@@ -63,9 +65,9 @@ const Signin = () => {
                             background='#DA8450'
                             fontWeight='500'
                             marginTop='20px'
-                            
+                           
                         >
-                           Sign in
+                         Sign in
                         </Button>
 
                         <p>Don't have an account?<Link to="/sign-up" style={{ textDecoration: 'none', color: '#DA8450' }}>Sign up</Link></p>
